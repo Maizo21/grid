@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "roboto", sans-serif;
+  font-size: 16px;
+  font-style: italic;
+  line-height: 1.5;
+  color: #dadada;
+  background-color: #363636;
+  text-align: center;
+}
+
+main {
+  width: 90%;
+  height: 100%;
+  display: grid;
+  place-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 200px));
+  grid-template-areas:
+    "uno uno dos"
+    "tres cuatro cuatro"
+    "cinco . seis";
+  margin: 20px auto 100px;
+  column-gap: 20px;
+  row-gap: 50px;
+}
+
+main div {
+  height: 300px;
+  width: 100%;
+}
+
+main div:nth-child(1) {
+  grid-area: uno;
+}
+
+main div:nth-child(1) .box {
+  background-color: #0b223a;
+}
+
+main div:nth-child(2) {
+  grid-area: dos;
+}
+
+main div:nth-child(2) .box {
+  background-color: #bddaec;
+}
+
+main div:nth-child(3) {
+  grid-area: tres;
+}
+
+main div:nth-child(3) .box {
+  background-color: #56aeff;
+}
+
+main div:nth-child(4) {
+  grid-area: cuatro;
+}
+
+main div:nth-child(4) .box {
+  background-color: #ffc856;
+}
+
+main div:nth-child(5) {
+  grid-area: cinco;
+}
+
+main div:nth-child(5) .box {
+  background-color: #ff8f56;
+}
+
+main div:nth-child(6) {
+  grid-area: seis;
+}
+
+main div:nth-child(6) .box {
+  background-color: #ff56ae;
+}
+
+@media screen and (max-width: 830px) {
+  main {
+    grid-template-areas:
+      "uno uno"
+      "dos dos"
+      "tres tres"
+      "cuatro cuatro"
+      "cinco cinco"
+      "seis seis";
+  }
+}
